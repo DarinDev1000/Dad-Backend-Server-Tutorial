@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "hello": "node hello-world.js",
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +12,7 @@
   "author": "Darin",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.2",
-    "ts-node": "^8.6.2"
+    "nodemon": "^2.0.2"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
