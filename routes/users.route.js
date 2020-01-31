@@ -11,6 +11,7 @@ const router = require('koa-router')(); // router middleware for koa
 // const router: Router = new Router();
 
 router.get('/users/get', users.getUsers);
+router.post('/users/add', users.addUser);
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 

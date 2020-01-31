@@ -12,9 +12,9 @@ class UserModel {
     }
   }
   
-  static async addUsers(ctx) {
+  static async addUser(ctx) {
     try {
-      const data = await userService.addUsers(ctx);
+      const data = await userService.addUser(ctx);
       ctx.body = data;
     } catch (e) {
       console.error(e);
