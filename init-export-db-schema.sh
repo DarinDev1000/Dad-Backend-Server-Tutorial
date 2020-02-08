@@ -1,9 +1,20 @@
 #!/bin/bash
+echo "********************"
+echo
 echo "This script initializes a new dbSchema export in this project"
-echo "It exports the database from localhost"
-# echo "You may want to make a new database user named 'export' with the correct permissions"
-# mysql> GRANT SELECT,LOCK TABLES ON DBNAME.* TO 'username'@'localhost';
-echo "------"
+echo "It exports the database schema from localhost with the mysql and mysqldump cli tools"
+echo
+echo "You may want to make a new database user named 'export' with the correct permissions"
+echo "permissions example:     mysql> GRANT SELECT,LOCK TABLES ON DBNAME.* TO 'username'@'localhost';"
+echo
+echo "------WARNING------"
+echo
+echo "Currently, this script exposes your local development database password in your git history!"
+echo
+echo "-------------------"
+
+echo "**** If you accept, press ENTER ****"
+    read ACCEPT
 
 DIRECTORY=databaseSchema
 if [ -d "$DIRECTORY" ]; then
@@ -44,8 +55,12 @@ fi
 
 echo ---------------------------
 echo Remember to add:
+echo
 echo '"export-db-schema": "cd databaseSchema && ./export-db-schema.sh"'
+echo
 echo to your package.json scripts and run it when the database changes.
 echo ---------------------------
+echo
 echo "run 'npm run export-db-schema' to export the database schema"
+echo
 echo ---------------------------
