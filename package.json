@@ -7,6 +7,7 @@
     "hello": "node hello-world.js",
     "start": "node app.js",
     "dev": "nodemon app.js",
+    "export-db-schema": "cd databaseSchema && ./export-db-schema.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Darin",
