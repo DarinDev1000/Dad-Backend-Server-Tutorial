@@ -69,6 +69,7 @@ app.use(async function (ctx, next) {
 // PUBLIC ROUTES
 app.use(require('./routes/my-routes.route'));
 app.use(require('./routes/users.route'));
+app.use(require('./routes/python.route'));
 
 
 
